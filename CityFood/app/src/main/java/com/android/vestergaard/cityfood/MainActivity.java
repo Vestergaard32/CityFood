@@ -2,6 +2,7 @@ package com.android.vestergaard.cityfood;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +16,10 @@ public class MainActivity extends AppCompatActivity {
     Button ShareButton;
     Button FeedMeButton;
     TextView RecipeView;
-    ImageView ThumbnailView;
-    Bitmap thumbnail;
+
+    String type = "image/*";
+    String filename = "/shittyFood.jpg";
+    String mediaPath = Environment.getExternalStorageDirectory() + filename;
 
     private final int REQUEST_IMAGE_CAPTURE = 1;
 
@@ -55,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void Share()
     {
-        Toast.makeText(MainActivity.this, "Share has been clicked!", Toast.LENGTH_SHORT).show();
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             case REQUEST_IMAGE_CAPTURE:
                 if(resultCode == RESULT_OK){
                     Bundle extras = data.getExtras();
-                    thumbnail = (Bitmap) extras.get("data");
+                    
                 }
         }
     }
