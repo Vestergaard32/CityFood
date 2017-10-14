@@ -4,30 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.vestergaard.cityfood.MainActivity">
+    tools:context="com.android.vestergaard.cityfood.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
 
     <Button
         android:id="@+id/feedme_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="147dp"
-        tools:layout_editor_absoluteY="27dp" />
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="184dp"
+        android:layout_height="0dp"
+        android:background="@drawable/cook"
+        android:textAlignment="textStart"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/recipe_textview"
+        android:layout_marginStart="93dp"
+        android:layout_marginEnd="84dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintLeft_toLeftOf="@+id/recipe_textview"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="93dp"
+        android:layout_marginRight="84dp" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="148dp" />
+        android:id="@+id/recipe_textview"
+        android:layout_width="0dp"
+        android:layout_height="273dp"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/share_btn"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="396dp" />
+        android:id="@+id/share_btn"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/share"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="299dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="299dp" />
 
 </android.support.constraint.ConstraintLayout>

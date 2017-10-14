@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CityFood</string>
+    <string name="feedme_btn">Feed me!</string>
+    <string name="share_btn">Share!</string>
 </resources>
